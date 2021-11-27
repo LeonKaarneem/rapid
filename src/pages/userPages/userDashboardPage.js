@@ -21,15 +21,23 @@ const UserDashboardSendForm = () => {
     const [ID, setID] = useState("");
 
     const onFinish = async () => {
-        const response = await axios.post('http://localhost:8080/add', {
-            id: 1,
-            name: "person1",
+        const response1 = await axios.post('http://localhost:8080/add', {
+            id: 2,
+            name: "person2",
             amount: parseFloat(balance),
 
         }).catch((err) => {
             console.log(err);
         })
-        console.log(response);
+        console.log(response1);
+        const response2 = await axios.post('http://localhost:8080/remove', {
+            id: 1,
+            name: "person2",
+            amount: parseFloat(balance),
+
+        }).catch((err) => {
+            console.log(err);
+        })
     }
 
 
