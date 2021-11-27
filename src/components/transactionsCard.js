@@ -22,7 +22,7 @@ const Content = () => {
 const Footer = () => {
     return(
         <div className="footerContent">
-            <div>See more</div>
+            <div className="footerButton">See more</div>
             <FooterIcon />
         </div>
     );

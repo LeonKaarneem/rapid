@@ -18,4 +18,9 @@
 .footerContent{
     display: flex;
     flex-direction: row;
+    cursor: pointer;
+}
+
+.footerButton{
+    align-self: center;
 }
