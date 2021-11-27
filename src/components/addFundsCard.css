@@ -1,0 +1,14 @@
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+.contentRow {
+    display: flex;
+    justify-content: center;
+    border-top: 0.1rem solid #F2F3F7;
+    margin: 0 1rem;
+    align-items: center;
+    align-content: center;
+}
+
