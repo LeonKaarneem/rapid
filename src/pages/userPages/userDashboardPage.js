@@ -20,8 +20,15 @@ const UserDashboardSendForm = () => {
     const [balance, setBalance] = useState("");
     const [ID, setID] = useState("");
 
+    const onFinish = async () => {
+        const response = await axios.get('/1').catch((err) => {
+            console.log(err);
+        })
+        console.log(response);
+    }
+
     return (
-        <form style={{display: 'flex', flexDirection: 'column'}}>
+        <form onFinish={() => onFinish()} style={{display: 'flex', flexDirection: 'column'}}>
             <div>
                 Code
             <input
