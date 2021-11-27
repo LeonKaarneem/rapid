@@ -81,6 +81,12 @@
     display: none;
 }
 
+.iconCenter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 @media only screen and (max-width: 615px) {
     .mobileLayout {
         display: flex;

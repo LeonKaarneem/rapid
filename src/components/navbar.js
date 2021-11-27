@@ -5,7 +5,7 @@ import {useState} from "react";
 
 const notifacitonIcon = () => {
     return (
-        <svg width="22" height="27" viewBox="0 0 22 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="22" height="27" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
                 d="M18.7285 19.0071L17.1417 17.4203V11.2699C17.1417 7.49349 15.1243 4.33216 11.6063 3.4957V2.65924C11.6063 1.63826 10.7821 0.814102 9.76112 0.814102C8.74015 0.814102 7.91599 1.63826 7.91599 2.65924V3.4957C4.38563 4.33216 2.38059 7.48119 2.38059 11.2699L2.38059 17.4203L0.793771 19.0071C0.0188144 19.7821 0.560053 21.1106 1.65483 21.1106L17.8551 21.1106C18.9622 21.1106 19.5034 19.7821 18.7285 19.0071ZM14.6815 18.6504H4.84076L4.84076 11.2699C4.84076 8.21924 6.6982 5.73446 9.76112 5.73446C12.824 5.73446 14.6815 8.21924 14.6815 11.2699V18.6504ZM9.76112 24.8008C11.1142 24.8008 12.2213 23.6938 12.2213 22.3407H7.30094C7.30094 23.6938 8.39572 24.8008 9.76112 24.8008Z"
                 fill="#1D66FF"/>
@@ -15,7 +15,7 @@ const notifacitonIcon = () => {
 
 const notificationIconNotification = () => {
     return (
-        <svg width="22" height="27" viewBox="0 0 22 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="22" height="27" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
                 d="M18.7285 19.0071L17.1417 17.4203V11.2699C17.1417 7.49349 15.1243 4.33216 11.6063 3.4957V2.65924C11.6063 1.63826 10.7821 0.814102 9.76112 0.814102C8.74015 0.814102 7.91599 1.63826 7.91599 2.65924V3.4957C4.38563 4.33216 2.38059 7.48119 2.38059 11.2699L2.38059 17.4203L0.793771 19.0071C0.0188144 19.7821 0.560053 21.1106 1.65483 21.1106L17.8551 21.1106C18.9622 21.1106 19.5034 19.7821 18.7285 19.0071ZM14.6815 18.6504H4.84076L4.84076 11.2699C4.84076 8.21924 6.6982 5.73446 9.76112 5.73446C12.824 5.73446 14.6815 8.21924 14.6815 11.2699V18.6504ZM9.76112 24.8008C11.1142 24.8008 12.2213 23.6938 12.2213 22.3407H7.30094C7.30094 23.6938 8.39572 24.8008 9.76112 24.8008Z"
                 fill="#1D66FF"/>
@@ -84,11 +84,11 @@ const NavBar = () => {
                     </div>
                     <div className="intractable-button-container">
                         <div className="intractable-icons">
-                            <div>{lightDarkModeIcon()}</div>
-                            <div onClick={() => setNotificationActive(false)}>{notificationActive ? notificationIconNotification() : notifacitonIcon()}</div>
+                            <div className="iconCenter">{lightDarkModeIcon()}</div>
+                            <div className="iconCenter" onClick={() => setNotificationActive(false)}>{notificationActive ? notificationIconNotification() : notifacitonIcon()}</div>
                         </div>
                         <div className="intractable-account">
-                            <div>{accountIcon()}</div>
+                            <div className="iconCenter">{accountIcon()}</div>
                             <div>John Doe</div>
                         </div>
                     </div>
