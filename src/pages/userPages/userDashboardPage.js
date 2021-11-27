@@ -1,6 +1,7 @@
 import Layout from '../../components/layout.js';
 import AccountDetailsCard from "../../components/accountDetailsCard";
 import AddFundsCard from "../../components/addFundsCard";
+import TransferFundsCard from "../../components/transferFundsCard";
 import Card from "../../components/card";
 
 const UserDashboardPage = () => {
@@ -18,7 +19,7 @@ const UserDashboardPage = () => {
                             <AddFundsCard/>
                         </div>
                         <div style={{width: '50%', flex: '1 1 160px'}}>
-                            <AddFundsCard/>
+                            <TransferFundsCard/>
                         </div>
                     </div>
                 </div>
