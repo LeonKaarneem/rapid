@@ -1,0 +1,30 @@
+.card {
+
+    background-color: white;
+    border-radius: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    margin: 1rem;
+
+    padding: 0.5rem;
+
+    font-weight: 500;
+}
+
+.cardHeader {
+    font-size: 13px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cardContent {
+    font-size: 18px;
+}
+
+.cardFooter {
+    font-size: 13px;
+    margin: 0 auto;
+}
