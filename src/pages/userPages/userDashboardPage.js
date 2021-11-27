@@ -65,7 +65,10 @@ const getBalance = async () => {
         console.log(err);
     })
     console.log(response);
-    return response.data;
+    if (response && response.data) {
+        return response.data;
+    }
+    return response;
 }
 
 const UserDashboardPage = () => {
