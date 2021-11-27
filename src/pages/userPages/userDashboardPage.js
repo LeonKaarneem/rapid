@@ -19,7 +19,6 @@ const closeIcon = () => {
 const UserDashboardSendForm = () => {
     const [balance, setBalance] = useState("");
     const [ID, setID] = useState("");
-    useEffect(() => {getBalance()}, [])
 
     const onFinish = async () => {
         const response = await axios.get('http://localhost:8080/1').catch((err) => {
@@ -28,12 +27,6 @@ const UserDashboardSendForm = () => {
         console.log(response);
     }
 
-    const getBalance = async () => {
-        const response = await axios.get('http://localhost:8080/1').catch((err) => {
-            console.log(err);
-        })
-        console.log(response);
-    }
 
     return (
         <form onSubmit={onFinish()} style={{display: 'flex', flexDirection: 'column'}}>
@@ -67,8 +60,20 @@ const UserDashboardSendForm = () => {
     )
 }
 
+const getBalance = async () => {
+    const response = await axios.get('http://localhost:8080/1/amount').catch((err) => {
+        console.log(err);
+    })
+    console.log(response);
+    return response.data;
+}
+
 const UserDashboardPage = () => {
     const [showModal, setShowModal] = useState(false);
+    const [balance, setBalance] = useState(getBalance() ? getBalance : 0);
+
+
+    useEffect(() => {getBalance()}, []);
 
     const ModalComponent = () => {
         return (
