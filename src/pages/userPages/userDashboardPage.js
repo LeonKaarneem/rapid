@@ -21,7 +21,12 @@ const UserDashboardSendForm = () => {
     const [ID, setID] = useState("");
 
     const onFinish = async () => {
-        const response = await axios.get('http://localhost:8080/1').catch((err) => {
+        const response = await axios.post('http://localhost:8080/add', {
+            id: 1,
+            name: "person1",
+            amount: parseFloat(balance),
+
+        }).catch((err) => {
             console.log(err);
         })
         console.log(response);
