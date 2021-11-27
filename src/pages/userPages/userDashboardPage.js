@@ -3,7 +3,7 @@ import AccountDetailsCard from "../../components/accountDetailsCard";
 import AddFundsCard from "../../components/addFundsCard";
 import TransferFundsCard from "../../components/transferFundsCard";
 import TransactionsCard from "../../components/transactionsCard";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import './userDashboardPage.css';
 import axios from 'axios';
 
@@ -19,6 +19,7 @@ const closeIcon = () => {
 const UserDashboardSendForm = () => {
     const [balance, setBalance] = useState("");
     const [ID, setID] = useState("");
+    useEffect(() => {getBalance()}, [])
 
     const onFinish = async () => {
         const response = await axios.get('http://localhost:8080/1').catch((err) => {
@@ -27,8 +28,15 @@ const UserDashboardSendForm = () => {
         console.log(response);
     }
 
+    const getBalance = async () => {
+        const response = await axios.get('http://localhost:8080/1').catch((err) => {
+            console.log(err);
+        })
+        console.log(response);
+    }
+
     return (
-        <form onSubmit={() => onFinish()} style={{display: 'flex', flexDirection: 'column'}}>
+        <form onSubmit={onFinish()} style={{display: 'flex', flexDirection: 'column'}}>
             <div>
                 Code
             <input
