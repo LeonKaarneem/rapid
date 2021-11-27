@@ -21,7 +21,7 @@ const UserDashboardSendForm = () => {
     const [ID, setID] = useState("");
 
     const onFinish = async () => {
-        const response = await axios.get('/1').catch((err) => {
+        const response = await axios.get('http://localhost:8080/1').catch((err) => {
             console.log(err);
         })
         console.log(response);
