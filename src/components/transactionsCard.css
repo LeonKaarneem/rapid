@@ -1,0 +1,16 @@
+.transaction {
+    display: flex;
+    border-top: 0.1rem solid #F2F3F7;
+    margin: 0 1rem;
+    align-items: center;
+    align-content: center;
+    padding: 8.35px;
+
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footerContent{
+    display: flex;
+    flex-direction: row;
+}
