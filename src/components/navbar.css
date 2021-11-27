@@ -2,14 +2,14 @@
     display: flex;
     width: 100vw;
     align-items: center;
-    min-width: 350px;
+    min-width: 375px;
 }
 
 .adminLayout {
     display: flex;
     width: 100vw;
     align-items: center;
-    min-width: 350px;
+    min-width: 375px;
     background-color: #BADEF761;
 }
 
@@ -129,13 +129,12 @@
 
     .layout {
         display: flex;
-        width: 100vw;
         align-items: center;
     }
 
     .accordion {
         display: flex;
-        min-width: 350px;
+        min-width: 375px;
         flex-direction: column;
         align-items: center;
         background-color: white;
