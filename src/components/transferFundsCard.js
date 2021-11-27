@@ -13,6 +13,7 @@ const Content = (props) => {
     return(
         <div className="content">
             <ButtonPrimary abc={props} text={"Send to recipient"} />
+            <ButtonSecondary text={"Provide liability"} />
             <ButtonSecondary text={"Withdraw"} />
         </div>
     );
