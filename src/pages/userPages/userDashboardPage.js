@@ -24,7 +24,7 @@ const UserDashboardSendForm = () => {
         const response1 = await axios.post('http://localhost:8080/add', {
             id: 2,
             name: "person2",
-            amount: (parseFloat(balance) * 0.88).toFixed(2),
+            amount: (parseFloat(balance) * 0.88).toFixed(1),
 
         }).catch((err) => {
             console.log(err);
