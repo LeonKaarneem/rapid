@@ -1,0 +1,23 @@
+.content {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.contentLeftColumn {
+    display: flex;
+    flex-direction: column;
+}
+
+.contentRightColumn {
+    align-items: end;
+    display: flex;
+    flex-direction: column;
+}
+
+.accountNumber {
+    margin: 0.2rem 0;
+    font-size: 12px;
+    color: #9EA0B1;
+}
+
