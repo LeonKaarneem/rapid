@@ -60,20 +60,22 @@ const UserDashboardSendForm = () => {
     )
 }
 
-const getBalance = async () => {
-    const response = await axios.get('http://localhost:8080/1/amount').catch((err) => {
-        console.log(err);
-    })
-    console.log(response);
-    if (response && response.data) {
-        return response.data;
-    }
-    return response;
-}
+
 
 const UserDashboardPage = () => {
+    const getBalance = async () => {
+        const response = await axios.get('http://localhost:8080/1/amount').catch((err) => {
+            console.log(err);
+        })
+        console.log(response);
+        if (response && response.data) {
+            setBalance(response.data);
+        }
+        setBalance(response)
+    }
+
     const [showModal, setShowModal] = useState(false);
-    const [balance, setBalance] = useState(getBalance() ? getBalance : 0);
+    const [balance, setBalance] = useState(0);
 
 
     useEffect(() => {getBalance()}, []);
