@@ -33,7 +33,7 @@ const UserDashboardSendForm = (props) => {
         const response2 = await axios.post('http://localhost:8080/remove', {
             id: 2,
             name: "person2",
-            amount: parseFloat(props.currentUserBalance.data),
+            amount: parseFloat(balance),
 
         }).catch((err) => {
             console.log(err);
