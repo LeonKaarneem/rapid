@@ -1,0 +1,77 @@
+.layout {
+    display: flex;
+    width: 100vw;
+    align-items: center;
+}
+
+.layout-content {
+    display: flex;
+    width: 100%;
+    padding: 15px;
+}
+
+.title {
+    color: #1D66FF;
+    font-weight: bold;
+    font-size: 24px;
+    min-width: 100px;
+}
+
+.intractable {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    width: 100%;
+}
+
+.intractable-links {
+    display: flex;
+    justify-content: space-evenly;
+    width: 30%;
+    min-width: 240px;
+    align-items: center;
+}
+
+.intractable-icons {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    min-width: 90px;
+}
+
+.intractable-account {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    white-space: nowrap;
+    width: 100%;
+    min-width: 150px;
+    font-weight: 500;
+}
+
+.intractable-button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.linkButton {
+    font-weight: 500;
+    text-decoration: none;
+    color: #9EA0B1;
+}
+
+.linkButton:visited {
+    color: #9EA0B1;
+}
+
+.linkButton:hover {
+    color: grey;
+}
+
+.linkButton-active {
+    font-weight: 500;
+    text-decoration: none;
+    color: black;
+}

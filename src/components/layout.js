@@ -1,7 +1,12 @@
+import NavBar from "./navbar";
+
 const Layout = ({children}) => {
     return (
         <div>
-            {children}
+            <NavBar />
+            <div style={{padding: '15px'}}>
+                {children}
+            </div>
         </div>
     );
 }
