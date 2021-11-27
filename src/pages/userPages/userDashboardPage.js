@@ -19,9 +19,6 @@ const closeIcon = () => {
 const UserDashboardSendForm = (props) => {
     const [balance, setBalance] = useState("");
     const [ID, setID] = useState("");
-    console.log(props);
-    console.log(props.currentUserBalance);
-    console.log('ABOVE ME');
 
     const onFinish = async () => {
         const response1 = await axios.post('http://localhost:8080/add', {
@@ -36,7 +33,7 @@ const UserDashboardSendForm = (props) => {
         const response2 = await axios.post('http://localhost:8080/remove', {
             id: 1,
             name: "person1",
-            amount: parseFloat(props.currentUserBalance),
+            amount: parseFloat(props.currentUserBalance.data),
 
         }).catch((err) => {
             console.log(err);
