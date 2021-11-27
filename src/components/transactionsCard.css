@@ -5,9 +5,14 @@
     align-items: center;
     align-content: center;
     padding: 8.35px;
-
     flex-direction: row;
     justify-content: space-between;
+    cursor: pointer;
+}
+
+.transaction:hover {
+    background-color: #F2F3F7;
+    border-radius: 15px;
 }
 
 .footerContent{

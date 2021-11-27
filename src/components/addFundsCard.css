@@ -13,5 +13,15 @@
     align-items: center;
     align-content: center;
     padding: 8.35px;
+    cursor: pointer;
+}
+
+.contentRow:hover {
+    background-color: #F2F3F7;
+    border-radius: 15px;
+}
+
+.cardIcon {
+    cursor: pointer;
 }
 
