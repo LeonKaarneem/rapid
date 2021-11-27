@@ -22,7 +22,7 @@ const UserDashboardSendForm = () => {
     return (
         <form style={{display: 'flex', flexDirection: 'column'}}>
             <div>
-                <span style={{width: '100px'}}>Code</span>
+                Code
             <input
                 value={ID}
                 onChange={e => setID(e.target.value)}
@@ -34,7 +34,7 @@ const UserDashboardSendForm = () => {
             />
             </div>
             <div>
-                <span style={{width: '100px'}}>Amount</span>
+                Amount
             <input
                 value={balance}
                 onChange={e => setBalance(e.target.value)}
