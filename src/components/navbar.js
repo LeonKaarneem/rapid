@@ -80,7 +80,7 @@ const NavBar = () => {
                             <Link to="/admin/dashboard"
                                   className={transactionsActive ? "linkButton-active" : "linkButton"}
                                   onClick={() => setTransactionsActive(true)}>Transactions</Link>
-                        </div>
+                            </div>
                     </div>
                     <div className="intractable-button-container">
                         <div className="intractable-icons">
