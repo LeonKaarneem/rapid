@@ -75,3 +75,32 @@
     text-decoration: none;
     color: black;
 }
+
+.mobileLayout {
+    display: none;
+}
+
+@media only screen and (max-width: 615px) {
+    .mobileLayout {
+        display: block;
+    }
+
+    .intractable-links {
+        display: none;
+    }
+
+    .intractable-icons {
+        display: none;
+    }
+
+    .intractable-account {
+        display: none;
+    }
+
+    .layout {
+        display: flex;
+        width: 100vw;
+        align-items: center;
+    }
+
+}

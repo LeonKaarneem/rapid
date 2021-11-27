@@ -1,10 +1,11 @@
 import NavBar from "./navbar";
+import './layout.css';
 
 const Layout = ({children}) => {
     return (
         <div>
             <NavBar />
-            <div style={{padding: '15px'}}>
+            <div className="layoutContent">
                 {children}
             </div>
         </div>

@@ -1,7 +1,6 @@
 .content {
     display: flex;
     justify-content: space-between;
-
 }
 
 .contentLeftColumn {
@@ -10,7 +9,7 @@
 }
 
 .contentRightColumn {
-    align-items: end;
+    align-items: flex-end;
     display: flex;
     flex-direction: column;
 }
