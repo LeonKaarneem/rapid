@@ -3,7 +3,7 @@ import Card from "./card";
 
 const AccountDetailsCard = (props) => {
     return(
-        <Card leftHeader={"Balance"} rightHeader={"Available funds"} content={Content(props)}/>
+        <Card leftHeader="Balance" rightHeader="Available funds" content={Content(props)}/>
     );
 }
 
