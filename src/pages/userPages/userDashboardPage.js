@@ -104,7 +104,7 @@ const UserDashboardPage = () => {
                     <div style={{width: '100%'}}>
                         <AccountDetailsCard accountName="John Doe personal account"
                                             accountNumber="ISIN233215421341254124"
-                                            availableFunds={`[\"${(parseFloat(balance)).toFixed(2)}\"]`}/>
+                                            availableFunds={`[\"${(parseFloat(balance.data)).toFixed(2)}\"]`}/>
                     </div>
                     <div style={{display: 'flex', flexWrap: 'wrap'}}>
                         <div style={{width: '50%', flex: '1 1 160px'}}>
