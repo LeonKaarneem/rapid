@@ -77,7 +77,7 @@ const UserDashboardSendForm = () => {
 
 const User2Page = () => {
     const getBalance = async () => {
-        const response = await axios.get('http://localhost:8080/1/amount').catch((err) => {
+        const response = await axios.get('http://localhost:8080/2/amount').catch((err) => {
             console.log(err);
         })
         console.log(response);
@@ -117,7 +117,7 @@ const User2Page = () => {
             <div style={{display: 'flex', flexWrap: 'wrap'}}>
                 <div style={{flex: '1 1 40%'}}>
                     <div style={{width: '100%'}}>
-                        <AccountDetailsCard accountName="John Doe personal account"
+                        <AccountDetailsCard accountName="Person 2 personal account"
                                             accountNumber="ISIN233215421341254124"
                                             availableFunds={`[\"${(parseFloat(balance.data)).toFixed(2)}  €\"]`}/>
                     </div>
