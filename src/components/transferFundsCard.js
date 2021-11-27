@@ -3,16 +3,16 @@ import './transferFundsCard.css';
 import ButtonPrimary from "./buttonPrimary";
 import ButtonSecondary from "./buttonSecondary";
 
-const TransferFundsCard = () => {
+const TransferFundsCard = (props) => {
     return (
-        <Card leftHeader={"Transfer Funds"} content={Content()}/>
+        <Card leftHeader={"Transfer Funds"} content={Content(props)}/>
     );
 };
 
-const Content = () => {
+const Content = (props) => {
     return(
         <div className="content">
-            <ButtonPrimary text={"Send to recipient"} />
+            <ButtonPrimary abc={props} text={"Send to recipient"} />
             <ButtonSecondary text={"Withdraw"} />
         </div>
     );
