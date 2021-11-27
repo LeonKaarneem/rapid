@@ -1,0 +1,15 @@
+.buttonSec {
+    margin: 0.5rem 0 0.5rem;
+    border-radius: 1rem;
+    border-style: solid;
+    border-color: #1D66FF;
+    background-color: transparent;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.buttonTextSec {
+    font-size: 18px;
+    color: #1D66FF;
+}
