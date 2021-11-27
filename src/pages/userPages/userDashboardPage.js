@@ -16,7 +16,7 @@ const closeIcon = () => {
     )
 }
 
-const UserDashboardSendForm = () => {
+const UserDashboardSendForm = (props) => {
     const [balance, setBalance] = useState("");
     const [ID, setID] = useState("");
 
@@ -32,8 +32,8 @@ const UserDashboardSendForm = () => {
         console.log(response1);
         const response2 = await axios.post('http://localhost:8080/remove', {
             id: 1,
-            name: "person2",
-            amount: parseFloat(balance),
+            name: "person1",
+            amount: parseFloat(props.currentUserBalance),
 
         }).catch((err) => {
             console.log(err);
@@ -101,7 +101,7 @@ const UserDashboardPage = () => {
                         <div style={{display: 'flex', justifyContent: 'space-between', fontWeight: 500}}>Send funds to recipient
                             <div onClick={() => setShowModal(false)} className="closeIconContainer">{closeIcon()}</div>
                         </div>
-                        <div style={{textAlign: 'center'}}><UserDashboardSendForm/></div>
+                        <div style={{textAlign: 'center'}}><UserDashboardSendForm currentUserBalance={balance}/></div>
                     </div>
                 </div>
             </div>
