@@ -2,7 +2,7 @@ import Layout from '../../components/layout.js';
 import AccountDetailsCard from "../../components/accountDetailsCard";
 import AddFundsCard from "../../components/addFundsCard";
 import TransferFundsCard from "../../components/transferFundsCard";
-import Card from "../../components/card";
+import TransactionsCard from "../../components/transactionsCard";
 
 const UserDashboardPage = () => {
     return (
@@ -24,7 +24,7 @@ const UserDashboardPage = () => {
                     </div>
                 </div>
                 <div style={{flex: '1 1 60%'}}>
-                    <Card/>
+                    <TransactionsCard />
                 </div>
             </div>
         </Layout>
