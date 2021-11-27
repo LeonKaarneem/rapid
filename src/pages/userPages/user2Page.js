@@ -66,7 +66,7 @@ const UserDashboardSendForm = (props) => {
                     required
                 />
             </div>
-            <div>{ balance && !isNaN(balance) && "Amount in USD: " + (parseFloat(balance) * 1.13).toFixed(2) + "$"}</div>
+            <div>{ balance && !isNaN(balance) && "Amount in USD: " + (parseFloat(balance) * 1.13).toFixed(2) + "$" + " a fee of 2$ will be charged"}</div>
             <div><button onClick={() => onFinish()} type="submit" disabled={isNaN(balance)}>Submit</button></div>
         </form>
     )
