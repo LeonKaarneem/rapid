@@ -1,0 +1,15 @@
+.contentStatMonth {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.contentStatMonthEntry {
+    display: flex;
+    flex-direction: column;
+}
+
+.statMonthTitle {
+    font-size: 13px;
+    color: #9EA0B1;
+}
