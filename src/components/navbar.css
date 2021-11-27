@@ -118,6 +118,7 @@
 
     .accordion {
         display: flex;
+        min-width: 350px;
         flex-direction: column;
         align-items: center;
         background-color: white;
