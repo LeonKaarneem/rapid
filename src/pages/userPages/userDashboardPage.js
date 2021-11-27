@@ -19,6 +19,9 @@ const closeIcon = () => {
 const UserDashboardSendForm = (props) => {
     const [balance, setBalance] = useState("");
     const [ID, setID] = useState("");
+    console.log(props);
+    console.log(props.currentUserBalance);
+    console.log('ABOVE ME');
 
     const onFinish = async () => {
         const response1 = await axios.post('http://localhost:8080/add', {
