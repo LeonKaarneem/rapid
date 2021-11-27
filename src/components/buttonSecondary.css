@@ -7,6 +7,11 @@
     padding: 1rem;
     display: flex;
     justify-content: center;
+    cursor: pointer;
+}
+
+.buttonSec:hover {
+   background-color: #F2F3F7;
 }
 
 .buttonTextSec {
