@@ -21,22 +21,27 @@ const UserDashboardSendForm = (props) => {
     const [ID, setID] = useState("");
 
     const onFinish = async () => {
-        const response1 = await axios.post('http://localhost:8080/add', {
-            id: 1,
-            name: "person1",
-            amount: (parseFloat(balance) * 1.13),
+        return new Promise((resolve, reject) => {
+            const response1 = axios.post('http://localhost:8080/add', {
+                id: 1,
+                name: "person1",
+                amount: (parseFloat(balance) * 1.13),
+            }).catch((err) => {
+                console.log(err);
+            })
+            const response2 = axios.post('http://localhost:8080/remove', {
+                id: 2,
+                name: "person2",
+                amount: parseFloat(balance),
 
-        }).catch((err) => {
-            console.log(err);
-        })
-        console.log(response1);
-        const response2 = await axios.post('http://localhost:8080/remove', {
-            id: 2,
-            name: "person2",
-            amount: parseFloat(balance),
-
-        }).catch((err) => {
-            console.log(err);
+            }).catch((err) => {
+                console.log(err);
+            })
+            if (response1 && response2) {
+                resolve();
+            } else {
+                reject();
+            }
         })
     }
 
