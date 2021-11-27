@@ -5,6 +5,7 @@ import TransferFundsCard from "../../components/transferFundsCard";
 import TransactionsCard from "../../components/transactionsCard";
 import {useState} from "react";
 import './userDashboardPage.css';
+import axios from 'axios';
 
 const closeIcon = () => {
     return (
