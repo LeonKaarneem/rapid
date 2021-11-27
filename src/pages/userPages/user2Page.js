@@ -40,9 +40,8 @@ const UserDashboardSendForm = (props) => {
         })
     }
 
-
     return (
-        <form onSubmit={onFinish()} style={{display: 'flex', flexDirection: 'column'}}>
+        <form style={{display: 'flex', flexDirection: 'column'}}>
             <div>
                 Code
                 <input
@@ -68,7 +67,7 @@ const UserDashboardSendForm = (props) => {
                 />
             </div>
             <div>{ balance && !isNaN(balance) && "Amount in EUR: " + (parseFloat(balance) * 1.13).toFixed(2) + "$"}</div>
-            <div><button type="submit" disabled={isNaN(balance)}>Submit</button></div>
+            <div><button onClick={() => onFinish()} type="submit" disabled={isNaN(balance)}>Submit</button></div>
         </form>
     )
 }
