@@ -15,6 +15,42 @@ const closeIcon = () => {
     )
 }
 
+const UserDashboardSendForm = () => {
+    const [balance, setBalance] = useState("");
+    const [ID, setID] = useState("");
+
+    return (
+        <form style={{display: 'flex', flexDirection: 'column'}}>
+            <div>
+                <span style={{width: '100px'}}>Code</span>
+            <input
+                value={ID}
+                onChange={e => setID(e.target.value)}
+                placeholder="ABC123456789"
+                type="text"
+                name="code"
+                className="inputHolder"
+                required
+            />
+            </div>
+            <div>
+                <span style={{width: '100px'}}>Amount</span>
+            <input
+                value={balance}
+                onChange={e => setBalance(e.target.value)}
+                placeholder="e.g 10.00"
+                type="text"
+                name="balance"
+                className="inputHolder"
+                required
+            />
+            </div>
+            <div>{ balance && !isNaN(balance) && "Amount in EUR: " + (parseFloat(balance) * 0.88).toFixed(2) + "€"}</div>
+            <div><button type="submit" disabled={isNaN(balance)}>Submit</button></div>
+        </form>
+    )
+}
+
 const UserDashboardPage = () => {
     const [showModal, setShowModal] = useState(false);
 
@@ -26,9 +62,8 @@ const UserDashboardPage = () => {
                         <div style={{display: 'flex', justifyContent: 'space-between', fontWeight: 500}}>Send funds to recipient
                             <div onClick={() => setShowModal(false)} className="closeIconContainer">{closeIcon()}</div>
                         </div>
-                        <div>content</div>
+                        <div style={{textAlign: 'center'}}><UserDashboardSendForm/></div>
                     </div>
-                    <div>footer</div>
                 </div>
             </div>
         )
