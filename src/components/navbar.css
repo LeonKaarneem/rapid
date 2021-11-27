@@ -87,10 +87,15 @@
     justify-content: center;
 }
 
+.accordion {
+    display: none;
+}
+
 @media only screen and (max-width: 615px) {
     .mobileLayout {
         display: flex;
         align-items: center;
+        cursor: pointer;
     }
 
     .intractable-links {
@@ -109,5 +114,12 @@
         display: flex;
         width: 100vw;
         align-items: center;
+    }
+
+    .accordion {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: white;
     }
 }

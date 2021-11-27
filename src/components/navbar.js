@@ -1,5 +1,5 @@
 import './navbar.css';
-import {Link, useLocation } from "react-router-dom";
+import {Link, useLocation} from "react-router-dom";
 import {useState} from "react";
 
 
@@ -55,6 +55,7 @@ const hamburgerIcon = () => {
     )
 }
 
+
 const pathnames = {
     DASHBOARD: '/dashboard',
     TRANSACTIONS: '/admin/dashboard',
@@ -65,39 +66,60 @@ const NavBar = () => {
     const [userDasboardActive, setUserDasboardActive] = useState(location.pathname === pathnames.DASHBOARD);
     const [transactionsActive, setTransactionsActive] = useState(location.pathname === pathnames.TRANSACTIONS);
     const [notificationActive, setNotificationActive] = useState(true);
+    const [accordionActive, setAccordionActive] = useState(false);
 
     return (
-        <div className="layout">
-            <div className="layout-content">
-                <div className="title">Rapid</div>
-                <div className="intractable">
-                    <div className="intractable-links">
-                        <div>
-                            <Link to="/dashboard" className={userDasboardActive ? "linkButton-active" : "linkButton"}
-                                  onClick={() => setUserDasboardActive(true)}>Dashboard</Link>
-                        </div>
-                        <div>
-                            <Link to="/admin/dashboard"
-                                  className={transactionsActive ? "linkButton-active" : "linkButton"}
-                                  onClick={() => setTransactionsActive(true)}>Transactions</Link>
+        <>
+            <div className="layout">
+                <div className="layout-content">
+                    <div className="title">Rapid</div>
+                    <div className="intractable">
+                        <div className="intractable-links">
+                            <div>
+                                <Link to="/dashboard"
+                                      className={userDasboardActive ? "linkButton-active" : "linkButton"}
+                                      onClick={() => setUserDasboardActive(true)}>Dashboard</Link>
                             </div>
-                    </div>
-                    <div className="intractable-button-container">
-                        <div className="intractable-icons">
-                            <div className="iconCenter">{lightDarkModeIcon()}</div>
-                            <div className="iconCenter" onClick={() => setNotificationActive(false)}>{notificationActive ? notificationIconNotification() : notifacitonIcon()}</div>
+                            <div>
+                                <Link to="/admin/dashboard"
+                                      className={transactionsActive ? "linkButton-active" : "linkButton"}
+                                      onClick={() => setTransactionsActive(true)}>Transactions</Link>
+                            </div>
                         </div>
-                        <div className="intractable-account">
-                            <div className="iconCenter">{accountIcon()}</div>
-                            <div>John Doe</div>
+                        <div className="intractable-button-container">
+                            <div className="intractable-icons">
+                                <div className="iconCenter">{lightDarkModeIcon()}</div>
+                                <div className="iconCenter"
+                                     onClick={() => setNotificationActive(false)}>{notificationActive ? notificationIconNotification() : notifacitonIcon()}</div>
+                            </div>
+                            <div className="intractable-account">
+                                <div className="iconCenter">{accountIcon()}</div>
+                                <div>John Doe</div>
+                            </div>
                         </div>
-                    </div>
-                    <div className="mobileLayout">
-                        {hamburgerIcon()}
+                        <div onClick={() => {
+                            accordionActive ? setAccordionActive(false) : setAccordionActive(true)
+                        }} className="mobileLayout">
+                            {hamburgerIcon()}
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+            {accordionActive && <div className="accordion">
+                <div>
+                    <Link to="/dashboard" className={userDasboardActive ? "linkButton-active" : "linkButton"}
+                          onClick={() => setUserDasboardActive(true)}>Dashboard</Link>
+                </div>
+                <div>
+                    <Link to="/admin/dashboard"
+                          className={transactionsActive ? "linkButton-active" : "linkButton"}
+                          onClick={() => setTransactionsActive(true)}>Transactions</Link>
+                </div>
+                <div>
+                    <Link to="/dashboard" className="linkButton">My Account</Link>
+                </div>
+            </div>}
+        </>
     );
 }
 
