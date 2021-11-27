@@ -28,7 +28,7 @@ const UserDashboardSendForm = () => {
     }
 
     return (
-        <form onFinish={() => onFinish()} style={{display: 'flex', flexDirection: 'column'}}>
+        <form onSubmit={() => onFinish()} style={{display: 'flex', flexDirection: 'column'}}>
             <div>
                 Code
             <input
